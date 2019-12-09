@@ -1,14 +1,17 @@
 package main
 
 import (
-	"github.com/codenamecotc/snippetbox/pkg/models"
 	"html/template"
 	"path/filepath"
 	"time"
+
+	"github.com/codenamecotc/snippetbox/pkg/forms"
+	"github.com/codenamecotc/snippetbox/pkg/models"
 )
 
 type templateData struct {
 	CurrentYear int
+	Form        *forms.Form
 	Snippet     *models.Snippet
 	Snippets    []*models.Snippet
 }
